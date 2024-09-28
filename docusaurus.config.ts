@@ -77,19 +77,6 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: '教程',
-          items: [
-            {
-              label: 'Java 教程',
-              to: '/docs/tutorial-java',
-            },
-            {
-              label: 'Minecraft 教程',
-              to: '/docs/tutorial-minecraft',
-            },
-          ],
-        },
-        {
           title: '联系我们',
           items: [
             {

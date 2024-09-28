@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout>
-      <main>
+      <heading>
         <div className="container">
           <Heading as="h1" className="hero__title">
             {siteConfig.title}
@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
             </Link>
           </div>
         </div>
-      </main>
+      </heading>
     </Layout>
   );
 }

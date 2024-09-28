@@ -4,8 +4,6 @@ sidebar_label: '类'
 title: 'Java 类'
 ---
 
-## 类
-
 > 此教程使用 **Java Development Kit 1.8.0_341** ，与高版本 Java 可能有*些许差异*
 
 > 此教程仅针对对 **Minecraft** 相关的 **Java** 知识，进阶知识在此不会阐述，但会说明与 **Minecraft** 开发相关技巧

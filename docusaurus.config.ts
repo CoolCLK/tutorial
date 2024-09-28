@@ -80,8 +80,12 @@ const config: Config = {
           title: '教程',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Java 教程',
+              to: '/docs/tutorial-java',
+            },
+            {
+              label: 'Minecraft 教程',
+              to: '/docs/tutorial-minecraft',
             },
           ],
         },

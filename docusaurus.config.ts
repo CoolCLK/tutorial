@@ -49,25 +49,25 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: '',
     navbar: {
-      title: 'My Site',
+      title: 'CoolCLK 的教程',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: '',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: '教程',
         },
         {
           type: 'localeDropdown',
+          position: 'left',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/CoolCLK/tutorial',
           label: 'GitHub',
           position: 'right',
         },
@@ -77,7 +77,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '教程',
           items: [
             {
               label: 'Tutorial',
@@ -86,28 +86,11 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
+          title: '联系我们',
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/CoolCLK',
             },
           ],
         },

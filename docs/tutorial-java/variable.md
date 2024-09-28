@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+sidebar_label: '变量'
+title: 'Java 变量'
 ---
 
 ## 变量

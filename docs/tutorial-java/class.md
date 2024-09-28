@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+sidebar_label: '类'
+title: 'Java 类'
 ---
 
 ## 类

@@ -1,9 +1,7 @@
 ---
 sidebar_position: 1
----
-
-## 创建一个新的维度
-
+sidebar_label: '创建一个新的维度'
+title: '创建一个新的维度'
 ---
 
 在本期教程中，我们将创建一个新的**维度** *(Dimension)*。

@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
+sidebar_label: '入门'
+title: 'Java 入门'
 ---
-
-## Java 语言
 
 > 此教程使用 **Java Development Kit 1.8.0_341** ，与高版本 Java 可能有*些许差异*
 

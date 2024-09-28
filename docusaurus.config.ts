@@ -49,11 +49,11 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: '',
+    image: 'img/logo.svg',
     navbar: {
       title: 'CoolCLK 的教程',
       logo: {
-        src: '',
+        src: 'img/logo.svg',
       },
       items: [
         {

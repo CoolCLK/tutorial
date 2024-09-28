@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: '创建一个新的维度'
 ---
 
 ## 创建一个新的维度

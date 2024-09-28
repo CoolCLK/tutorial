@@ -64,6 +64,9 @@ const config: Config = {
           label: 'Tutorial',
         },
         {
+          type: 'localeDropdown',
+        },
+        {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
           position: 'right',

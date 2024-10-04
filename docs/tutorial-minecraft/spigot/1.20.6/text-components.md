@@ -28,8 +28,6 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 像大多数 Builder 一样，结尾都需要 `create()` 。
 
-最后是长这样的：<span style="color: red; background: rgba(0, 0, 0, 0.8); padding: 0.5em; font-weight: bold;">Hello world</span>
-
 *原始 JSON：`[{"text":"Hello ","color":"red"},{"text":"world","color":"dark_red","bold":"true"},{"text":"!","color":"red"}]`*
 
 ## KeybindCompoent
@@ -45,8 +43,6 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
     return true;
 }
 ```
-
-例子中，执行指令返回的结果是 <span style="color: white; background: rgba(0, 0, 0, 0.8); padding: 0.5em;">space</span> 。
 
 *原始 JSON：`[{"text":"Hello ","color":"red"},]`*
 
@@ -88,8 +84,6 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 }
 ```
 
-正常返回 <span style="color: white; background: rgba(0, 0, 0, 0.8); padding: 0.5em;">Hello World</span> 。
-
 ### 格式和颜色
 
 我们可以使用 `TextComponent` 下的几个方法来丰富文本，像与 `net.md_5.bungee.api.ChatColor` 一同使用的 `setColor` 方法，或者 `setBold` 方法，举个例子：
@@ -104,8 +98,6 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
     return true;
 }
 ```
-
-最后是这个样子：<span style="color: red; background: rgba(0, 0, 0, 0.8); padding: 0.5em; font-weight: bold;">Hello world</span>
 
 *原始 JSON：`[{"text":"Hello world!","color":"red","bold":"true"}]`*
 
@@ -125,8 +117,6 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 }
 ```
 
-摇身一变，变成这样了：<span style="background: rgba(0, 0, 0, 0.8); padding: 0.5em;"><span style="color: red; font-weight: bold;">Hello </span><span style="color: darkred;">world!</span></span>
-
 *原始 JSON：`[{"text":"Hello ","bold":"true","color":"red"},{"text":"world","color":"dark_red","extra":["!"]}]`*
 
 ### 事件
@@ -143,8 +133,6 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
     return true;
 }
 ```
-
-最后是这个样子：<span style="color: white; background: rgba(0, 0, 0, 0.8); padding: 0.5em;" title="访问 CoolCLK 的网站!" onclick="window.open('https://coolclk.github.io');">点我</span>
 
 *原始 JSON：`{"text":"点我","clickEvent":{"action":"open_url","value":"https://coolclk.github.io"},"hoverEvent":{"action":"show_text","value":"访问 CoolCLK 的网站!"}}`*
 
@@ -167,7 +155,5 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
     return true;
 }
 ```
-
-在客户端，应该能够看到 <span style="color: white; background: rgba(0, 0, 0, 0.8); padding: 0.5em;">成功将 <span style="color: gold;">钻石剑</span> * 32 给予 <span style="color: aqua;">Thinkofdeath</span></span>。
 
 *原始 JSON：`[{"translate":"item.swordDiamond.name","with":[{"translate":"item.swordDiamond.name","color":"gold"},"32",{"text":"Thinkofdeath","color":"aqua"}]}]`*

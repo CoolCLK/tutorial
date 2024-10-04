@@ -1,28 +1,22 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: '变量'
 title: 'Java 变量'
 ---
-
-> 此教程使用 **Java Development Kit 1.8.0_341** ，与高版本 Java 可能有*些许差异*
-
-> 此教程仅针对对 **Minecraft** 相关的 **Java** 知识，进阶知识在此不会阐述，但会说明与 **Minecraft** 开发相关技巧
-
-> **Java** 并不是开发 **Minecraft** 的最终语言，也有与 **Java** 同样是使用 *Java Virtual Machine* 的 **Kotlin** ，以及其它通过一些桥梁连接来实现制作模组、使你得以使用其它语言畅游在 **Minecraft** 开发的世界中，又或是使用简易的方法 *（例如 [MCreator](https://mcreator.net/)）* 生成代码。
-
-> 对于想要学习更多的用户，可以前往 [Runoob Java 教程](https://www.runoob.com/java) 学习
 
 **变量 *(Variable)*** 是为我们储存*临时*数据的解决方案。
 
 一个简单的变量定义如下：
 
-```Object obj;```
+```java
+Object obj;
+```
 
 这是一个很有意思的代码，因为它定义的变量 ```obj``` 兼容性极强。
 
 你可以给这个变量**赋值**，像这样：
 
-``` java
+```java
 obj = null; // null
 obj = 0; // int
 obj = 0D; // double
@@ -37,7 +31,7 @@ obj = anotherObj; // 这个变量将最终指向另一个变量
 
 什么是**软复制**呢？就是指一个变量的**指针** *(内存地址，对于每一种语言都基于此在内存储存变量)* 被赋予到目标变量，引用目标变量是实际上*最终*引用的是一开始的变量。像这样：
 
-``` java
+```java
 class Student {
     String name;
     
@@ -57,7 +51,7 @@ b.name = "B 学生";
 
 因为两个变量实际上用的都是一个 ```Student``` 对象，为了验证，你可以在此之后加上：
 
-``` java
+```java
 System.out.println(a);
 System.out.println(b);
 ```
@@ -69,7 +63,7 @@ coolclk.tutorial.Main.Student@114514
 coolclk.tutorial.Main.Student@114514
 ```
 
-完全相同，在 ```@``` 后的内容是每个对象独立的 *hashCode* ，也验证了上方的说法。
+完全相同，在 `@` 后的内容是每个对象独立的 *hashCode* ，也验证了上方的说法。
 
 那么，该怎么解决这个问题呢？
 
@@ -77,7 +71,7 @@ coolclk.tutorial.Main.Student@114514
 
 对于同一包下的类，你可以在原先基础上做出改变，像这样：
 
-``` java
+```java
 class Student implements Cloneable {
     String name;
     

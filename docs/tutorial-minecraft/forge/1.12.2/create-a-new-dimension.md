@@ -8,7 +8,7 @@ title: '创建一个新的维度'
 
 我们在包 ```coolclk.tutorial.world``` ，创建类 ```DimensionType``` 并像这样输入代码：
 
-``` java
+```java
 package coolclk.tutorial.world;
 
 import static net.minecraft.world.DimensionType.register;
@@ -25,7 +25,7 @@ public class DimensionType {
 
 我们在包 ```coolclk.tutorial.world``` ，创建类 ```DimensionType``` 并像这样输入代码：
 
-``` java
+```java
 package coolclk.tutorial.world;
 
 import static net.minecraft.world.DimensionType.register;
@@ -41,7 +41,7 @@ public class DimensionType {
 
 在此包下创建 ```WorldProviderTutorial``` ，一般是这样的：
 
-``` java
+```java
 
 package coolclk.tutorial.world;
 
@@ -89,7 +89,7 @@ public class WorldProviderTutorial extends WorldProvider {
 
 在此包下创建 ```gen.ChunkGeneratorTutorial``` ，默认是这样的：
 
-``` java
+```java
 package coolclk.tutorial.world.gen;
 
 import net.minecraft.entity.EnumCreatureType;
@@ -149,7 +149,7 @@ public class ChunkGeneratorTutorial implements IChunkGenerator {
 
 这是一个简单生成拥有矿洞、村庄、要塞、水湖、岩浆湖、矿物的超平坦的例子（省略 ```import``` 等）：
 
-``` java
+```java
 private final Random randomizer;
 private final World world;
 private final boolean mapFeaturesEnabled;
@@ -232,9 +232,6 @@ public void populate(int chunkX, int chunkZ) {
         if (this.settings.useStrongholds) {
             this.strongholdGenerator.generateStructure(this.world, this.randomizer, chunkPosition);
         }
-        //if (this.settings.useFloatingBoats) {
-            this.floatingBoatGenerator.generateStructure(this.world, this.randomizer, chunkPosition);
-        //}
     }
 
     if (biome != Biomes.DESERT && biome != Biomes.DESERT_HILLS && this.settings.useWaterLakes && !hasVillage && randomizer.nextInt(this.settings.waterLakeChance) == 0) {
@@ -331,7 +328,7 @@ public boolean isInsideStructure(@Nonnull World worldIn, @Nonnull String structu
 
 之后，为了进入到这个维度，我这里先用指令实现进入我的维度，若你也想这样，在你的 Forge 入口，像我这样注册简易指令：
 
-``` java
+```java
 package coolclk.tutorial;
 
 import coolclk.tutorial.world.DimensionType;

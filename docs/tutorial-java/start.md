@@ -6,13 +6,9 @@ title: 'Java 开始页'
 
 > 此教程使用 **Java Development Kit 1.8.0_341** ，与高版本 Java 可能有*些许差异*
 
-> 此教程仅针对对 **Minecraft** 相关的 **Java** 知识，进阶知识在此不会阐述，但会说明与 **Minecraft** 开发相关技巧
+> **Java** 也许并不是适合你开发的最终语言，也有与 **Java** 同样是使用 *Java Virtual Machine* 的 **Kotlin** *(虽然不再是了)*。
 
 > 此教程此后或将不再展示全部代码内容或将类路径写全、省略 import 语句
-
-> **Java** 并不是开发 **Minecraft** 的最终语言，也有与 **Java** 同样是使用 *Java Virtual Machine* 的 **Kotlin** ，以及其它通过一些桥梁连接来实现制作模组、使你得以使用其它语言畅游在 **Minecraft** 开发的世界中，又或是使用简易的方法 *（例如 [MCreator](https://mcreator.net/)）* 生成代码。
-
-> 对于想要学习更多的用户，可以前往 [Runoob Java 教程](https://www.runoob.com/java) 学习
 
 **Java** 是一个*中级语言*，拥有 *C* 和 *C++* 类似的继承特性，且相较于前两者更加易于编程。
 
@@ -29,7 +25,7 @@ title: 'Java 开始页'
 
 创建一个 Java 源代码文件，若只是单独被创建并**单独被使用**，你一般只需要这么写：
 
-``` java
+```java
 import java.lang.System; // 导入所需的类，就不用在接下来的编写中打一大串字母
 
 public class Main { // 定义我们的类
@@ -59,7 +55,7 @@ Hello world!
 
 完成！不过只输出个“你好世界”似乎有点不咋地... 你也可以做个时钟，像这样：
 
-``` java
+```java
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -87,8 +83,6 @@ Windows PowerShell
 PS C:\Users\CoolCLK\Desktop> java .\Timer.java
 当前时间: 2024/04/27 07:07:36
 ```
-
-接下来，我们正式进入到 Java **语言** 的学习的第一步——[类](class.md)。
 
 顺带一提，这是我编写此教程时所使用的 IDE ，我认为它十分顺手：
 

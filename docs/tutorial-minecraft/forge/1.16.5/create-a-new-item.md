@@ -30,10 +30,10 @@ import java.lang.Override;
 创建还不行，还被注册，比如一个 **草** 是这么被注册的：
 
 ```java
-public static final Item GRASS = Items.registerBlock(Blocks.GRASS, ItemGroup.TAB_DECORATIONS);
+public static final Item GRASS = net.minecraft.item.Items.registerBlock(Blocks.GRASS, ItemGroup.TAB_DECORATIONS);
 ```
 
-至于这 ```Items.registerBlock(Block, ItemGroup)```（区分好这个 `Items` 不是我们刚刚创建的那一个，而是 `net.minecraft.item.Items` ） 嘛，是 Forge 为了方便**注册***方块的物品形式*写的。但它最后指向的是这个方法：
+至于这 ```net.minecraft.item.Items.registerBlock(Block, ItemGroup)```（区分好这个 `Items` 不是我们刚刚创建的那一个，而是 `net.minecraft.item.Items` ） 嘛，是 Forge 为了方便**注册***方块的物品形式*写的。但它最后指向的是这个方法：
 
 ```java
 private static Item registerItem(ResourceLocation location, Item item) {

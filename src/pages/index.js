@@ -33,7 +33,9 @@ export default function Home() {
     <Layout
       title={`CoolCLK 的教程网站`}
       description="CoolCLK 的教程网站">
-      <HomepageBody />
+      <main>
+        <HomepageBody />
+      </main>
     </Layout>
   );
 }

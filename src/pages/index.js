@@ -33,7 +33,7 @@ export default function Home() {
     <Layout
       title={`CoolCLK 的教程网站`}
       description="CoolCLK 的教程网站">
-      <main>
+      <main styles="display: flex; width: 100%; flex-direction: column; justify-content: center; flex: 1;">
         <HomepageBody />
       </main>
     </Layout>

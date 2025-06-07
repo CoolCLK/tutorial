@@ -66,7 +66,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: '教程',
+        title: 'CoolCLK 的网站',
         logo: {
           alt: '图标',
           src: 'img/logo.svg',

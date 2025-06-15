@@ -25,7 +25,7 @@ title: 'Java 开始页'
 
 创建一个 Java 源代码文件，若只是单独被创建并**单独被使用**，你一般只需要这么写：
 
-```java
+```java title="/src/java/coolclk/tutorial/Main.java" showLineNumbers
 import java.lang.System; // 导入所需的类，就不用在接下来的编写中打一大串字母
 
 public class Main { // 定义我们的类
@@ -55,7 +55,7 @@ Hello world!
 
 完成！不过只输出个“你好世界”似乎有点不咋地... 你也可以做个时钟，像这样：
 
-```java
+```java title="/src/java/coolclk/tutorial/Timer.java" showLineNumbers
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -86,4 +86,4 @@ PS C:\Users\CoolCLK\Desktop> java .\Timer.java
 
 顺带一提，这是我编写此教程时所使用的 IDE ，我认为它十分顺手：
 
-> [IntelliJ IDEA Community Edition](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows&code=IIC) 2024.1 *（你最好使用最新版本，除非有特殊需求，例如运行低版本 Gradle ，不过我认为那没什么必要）*
+> [IntelliJ IDEA Community Edition](https://www.jetbrains.com/zh-cn/idea/download/download-thanks.html?platform=windows&code=IIC) 2025.1.2 *（你最好使用最新版本，除非有特殊需求，例如运行低版本 Gradle ，不过我认为那没什么必要）*

@@ -8,7 +8,7 @@ title: 'Java 类'
 
 不过，现如今有了 IDE ，你不必再为此发愁，因为 IDE 会为你自动编写那些东西，比如我在 ```coolclk.tutorial``` 下创建一个 ```Main``` ，打开后直接便有了：
 
-```java
+```java title="/src/java/coolclk/tutorial/Main.java" showLineNumbers
 package coolclk.tutorial;
 
 public class Main {

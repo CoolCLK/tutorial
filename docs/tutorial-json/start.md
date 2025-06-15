@@ -6,7 +6,7 @@ title: 'JSON 开始页'
 
 你是否曾见过这样的储存数据的方式？
 
-```json
+```json showLineNumbers
 {
   "name": "Class 1",
   "index": 1,

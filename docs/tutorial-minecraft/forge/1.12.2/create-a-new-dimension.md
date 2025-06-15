@@ -6,26 +6,9 @@ title: '创建一个新的维度'
 
 在本期教程中，我们将创建一个新的**维度** *(Dimension)*。
 
-我们在包 ```coolclk.tutorial.world``` ，创建类 ```DimensionType``` 并像这样输入代码：
+我们在包 ```coolclk.tutorial.world``` ，创建几个类并像这样输入代码：
 
-```java
-package coolclk.tutorial.world;
-
-import static net.minecraft.world.DimensionType.register;
-
-public class DimensionType {
-    public static final net.minecraft.world.DimensionType TUTORIAL;
-
-    static {
-        TUTORIAL = register("tutorial", "_tutorial", 2, WorldProviderTurotial.class, false);
-    }
-}
-
-```
-
-我们在包 ```coolclk.tutorial.world``` ，创建类 ```DimensionType``` 并像这样输入代码：
-
-```java
+```java title="/src/main/java/coolclk/tutorial/world/DimensionType.java" showLineNumbers
 package coolclk.tutorial.world;
 
 import static net.minecraft.world.DimensionType.register;
@@ -39,9 +22,7 @@ public class DimensionType {
 }
 ```
 
-在此包下创建 ```WorldProviderTutorial``` ，一般是这样的：
-
-```java
+```java title="/src/main/java/coolclk/tutorial/world/WorldProviderTutorial.java" showLineNumbers
 
 package coolclk.tutorial.world;
 
@@ -89,7 +70,7 @@ public class WorldProviderTutorial extends WorldProvider {
 
 在此包下创建 ```gen.ChunkGeneratorTutorial``` ，默认是这样的：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/world/gen/ChunkGeneratorTutorial.java" showLineNumbers
 package coolclk.tutorial.world.gen;
 
 import net.minecraft.entity.EnumCreatureType;
@@ -149,7 +130,7 @@ public class ChunkGeneratorTutorial implements IChunkGenerator {
 
 这是一个简单生成拥有矿洞、村庄、要塞、水湖、岩浆湖、矿物的超平坦的例子（省略 ```import``` 等）：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/world/gen/ChunkGeneratorTutorial.java" showLineNumbers
 private final Random randomizer;
 private final World world;
 private final boolean mapFeaturesEnabled;
@@ -158,7 +139,7 @@ private final MapGenCaves caveGenerator;
 private final MapGenVillage villageGenerator;
 private final MapGenStrongholdPortalRoom strongholdGenerator;
 
-public ChunkGeneratorSky(World world) {
+public ChunkGeneratorTutorial(World world) {
     this.world = world;
     this.mapFeaturesEnabled = world.getWorldInfo().isMapFeaturesEnabled();
     this.randomizer = new Random(world.getSeed());
@@ -328,7 +309,7 @@ public boolean isInsideStructure(@Nonnull World worldIn, @Nonnull String structu
 
 之后，为了进入到这个维度，我这里先用指令实现进入我的维度，若你也想这样，在你的 Forge 入口，像我这样注册简易指令：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/TutorialMod.java" showLineNumbers
 package coolclk.tutorial;
 
 import coolclk.tutorial.world.DimensionType;

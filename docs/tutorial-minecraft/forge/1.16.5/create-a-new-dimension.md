@@ -8,7 +8,7 @@ title: '创建一个新的维度'
 
 我们打开文件夹 ```src/main/resources/data/tutorial/dimension_type``` ，创建一个 ```example_dimension_type.json```，输入如下内容：
 
-```json
+```json title="/src/main/resources/data/tutorial/dimension_type/example_dimension_type.json" showLineNumbers
 {
   "fixed_time": 0,
   "has_skylight": true,
@@ -53,7 +53,7 @@ title: '创建一个新的维度'
 
 这里有四种方式生成你的世界，分别是 ```minecraft:noise```、```minecraft:flat```、```minecraft:debug```、和自定义生成维度。接下来我将一一列出除最后一种的配置文件：
 
-```json
+```json showLineNumbers
 {
   "type": "tutorial:example_dimension_type",
   "generator": {
@@ -106,7 +106,7 @@ title: '创建一个新的维度'
 }
 ```
 
-```json
+```json showLineNumbers
 {
   "type": "tutorial:example_dimension_type",
   "generator": {
@@ -115,7 +115,7 @@ title: '创建一个新的维度'
 }
 ```
 
-```json
+```json showLineNumbers
 {
   "type": "tutorial:example_dimension_type",
   "generator": {
@@ -146,9 +146,9 @@ title: '创建一个新的维度'
 
 最后一种自定义生成方式具有**高自由度**的特点，适合高级用户。
 
-我们在任意软件包下创建一个类（例如 ```ExampleChunkGenerator``` ），我们首先继承 ```net.minecraft.world.gen.ChunkGenerator``` ，代码如下：
+我们在任意软件包下创建一个类（例如 ```ChunkGeneratorExample``` ），我们首先继承 ```net.minecraft.world.gen.ChunkGenerator``` ，代码如下：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/world/gen/ChunkGeneratorExample.java" showLineNumbers
 package coolclk.tutorial.world.gen;
 
 import net.minecraft.world.gen.ChunkGenerator;
@@ -193,7 +193,7 @@ public class ChunkGeneratorExample extends ChunkGenerator {
 
 当我们编写完成后，怎么使用呢？很简单，我们在代码结尾添加这些代码：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/world/gen/ChunkGeneratorExample.java"
 static {
     Registry.register(Registry.CHUNK_GENERATOR, "example_generator", ChunkGeneratorExample.CODEC);
 }
@@ -201,7 +201,7 @@ static {
 
 一般你是不会去直接使用 ```settings``` *（除非为了~~方便同时创建其它维度~~**提高代码可读性**除外）*，因此，我此处的配置文件只需要这么写：
 
-```json
+```json title="/src/main/resources/data/tutorial/dimension/example_dimension.json" showLineNumbers
 {
   "type": "tutorial:example_dimension_type",
   "generator": {
@@ -212,7 +212,7 @@ static {
 
 最后，我们来注册这个维度。这里我创建了一个新的类来管理维度，代码如下：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/common/DimensionManager.java"
 public static final RegistryKey<Dimension> EXAMPLE_DIMENSION = RegistryKey.create(Registry.LEVEL_STEM_REGISTRY, new ResourceLocation("example_dimension"));
 ```
 

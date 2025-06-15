@@ -16,7 +16,7 @@ title: '聊天组件'
 
 有了上方的构造器，我们就可以使消息成为富文本，例如继承 `CommandExecutor` 后在方法里里这么写：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     sender.sendMessage(new ComponentBuilder("Hello ").color(ChatColor.RED)
@@ -36,7 +36,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 例子：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     sender.sendMessage(new KeybindCompoent("key.jump"));
@@ -50,7 +50,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 可以通过目标选择器显示目标，例子：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     sender.sendMessage(new SelectorComponent("@p[distance=10..]"));
@@ -62,7 +62,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 可以通过目标选择器显示目标，例子：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     sender.sendMessage(new ScoreComponent("Dinnerbone", "objective"));
@@ -76,7 +76,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 可以显示文本。创建后是可以使用方法带上属性的，例子：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     sender.sendMessage(new TextComponent("Hello world!"));
@@ -88,7 +88,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 我们可以使用 `TextComponent` 下的几个方法来丰富文本，像与 `net.md_5.bungee.api.ChatColor` 一同使用的 `setColor` 方法，或者 `setBold` 方法，举个例子：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     TextComponent message = new TextComponent("Hello world");
@@ -103,7 +103,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 能不能更好一些？可以，像这样的：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     TextComponent message = new TextComponent("Hello ");
@@ -123,7 +123,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 我们可以使用 `TextComponent` 事件 API 来处理聊天栏事件，比如：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     TextComponent message = new TextComponent("点我");
@@ -140,7 +140,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 这可以帮助你显示客户端已被翻译的文本，比如说显示一个给予命令的消息：
 
-```java
+```java showLineNumbers
 @Override
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     TranslatableComponent giveMessage = new TranslatableComponent("commands.give.success");

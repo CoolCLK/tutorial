@@ -16,7 +16,7 @@ Object obj;
 
 你可以给这个变量**赋值**，像这样：
 
-```java
+```java showLineNumbers
 obj = null; // null
 obj = 0; // int
 obj = 0D; // double
@@ -31,7 +31,7 @@ obj = anotherObj; // 这个变量将最终指向另一个变量
 
 什么是**软复制**呢？就是指一个变量的**指针** *(内存地址，对于每一种语言都基于此在内存储存变量)* 被赋予到目标变量，引用目标变量是实际上*最终*引用的是一开始的变量。像这样：
 
-```java
+```java showLineNumbers
 class Student {
     String name;
     
@@ -51,7 +51,7 @@ b.name = "B 学生";
 
 因为两个变量实际上用的都是一个 ```Student``` 对象，为了验证，你可以在此之后加上：
 
-```java
+```java showLineNumbers
 System.out.println(a);
 System.out.println(b);
 ```
@@ -71,7 +71,7 @@ coolclk.tutorial.Main.Student@114514
 
 对于同一包下的类，你可以在原先基础上做出改变，像这样：
 
-```java
+```java showLineNumbers
 class Student implements Cloneable {
     String name;
     

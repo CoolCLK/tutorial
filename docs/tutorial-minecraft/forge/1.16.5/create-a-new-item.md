@@ -5,7 +5,7 @@ title: '创建一个新的物品'
 ---
 
 本期教程导入列表：
-```java
+```java showLineNumbers
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -29,13 +29,13 @@ import java.lang.Override;
 
 创建还不行，还被注册，比如一个 **草** 是这么被注册的：
 
-```java
+```java title="net.minecraft.item.Items"
 public static final Item GRASS = net.minecraft.item.Items.registerBlock(Blocks.GRASS, ItemGroup.TAB_DECORATIONS);
 ```
 
 至于这 ```net.minecraft.item.Items.registerBlock(Block, ItemGroup)```（区分好这个 `Items` 不是我们刚刚创建的那一个，而是 `net.minecraft.item.Items` ） 嘛，是 Forge 为了方便**注册***方块的物品形式*写的。但它最后指向的是这个方法：
 
-```java
+```java title="net.minecraft.item.Items"
 private static Item registerItem(ResourceLocation location, Item item) {
   if (item instanceof BlockItem) {
      ((BlockItem) item).registerBlocks(Item.BY_BLOCK, item);
@@ -49,13 +49,13 @@ private static Item registerItem(ResourceLocation location, Item item) {
 
 那要怎么给它放创造物品栏里边呢？十分简单，你可以在物品构造方法中插入设定创造模式物品栏的代码，例如我在我们自己创建的 ```Items``` 类写的这一行代码：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/item/Items.java" showLineNumbers
 public static final Item TUTOIRAL = new Item(new Properties().tab(ItemGroup.TAB_MISC));
 ```
 
-但是你还想要创建一个专属的创造模式物品栏吗？很简单，也是创建一个类 ```ItemGroup``` （我是在 `coolclk.tutorial.item` ） 管理创造模式物品栏，创建的例子比如这一行：
+但是你还想要创建一个专属的创造模式物品栏吗？很简单，也是创建一个类 ```ItemGroup``` 管理创造模式物品栏，创建的例子比如这一行：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/item/ItemGroup.java" showLineNumbers
 public static final ItemGroup TAB_TUTORIAL = new ItemGroup("tutoiral") {
     @Override
     @OnlyIn(Dist.CLIENT)
@@ -67,7 +67,7 @@ public static final ItemGroup TAB_TUTORIAL = new ItemGroup("tutoiral") {
 
 之后将刚才的代码稍作改动：
 
-```java
+```java title="/src/main/java/coolclk/tutorial/item/Items.java" showLineNumbers
 public static final Item TUTOIRAL = new Item(new Properties().tab(coolclk.tutorial.item.ItemGroup.TAB_TUTORIAL));
 ```
 
@@ -77,7 +77,7 @@ public static final Item TUTOIRAL = new Item(new Properties().tab(coolclk.tutori
 
 创建文件夹 ```src/main/resources/assets/tutorial/textures/item``` 、 ```src/main/resources/assets/tutorial/models/item``` ，分别放入你的材质或创建一个 ```.json``` 文件，你的文件应该取名为与物品注册是相同的 ID ，那么我这里就创建 ```tutoiral.json``` ，对于正常的物品，只需要这么写：
 
-```json
+```json title="/src/main/resources/assets/tutorial/models/item/tutorial.json" showLineNumbers
 {
   "parent": "tutorial:item/generated",
   "textures": {
@@ -92,16 +92,14 @@ public static final Item TUTOIRAL = new Item(new Properties().tab(coolclk.tutori
 
 格式倒是没什么好说的，我就顺带把上面需要语言文件的地方都添加名称了。
 
-```json
-// en_us.json
+```json title="/src/main/resources/assets/tutorial/lang/en_us.json" showLineNumbers
 {
   "item.tutorial.tutorial": "Tutorial Item",
   "itemGroup.tutorial": "Tutorial",
 }
 ```
 
-```json
-// zh_cn.json
+```json title="/src/main/resources/assets/tutorial/lang/zh_cn.json" showLineNumbers
 {
   "item.tutorial.tutorial": "教程物品",
   "itemGroup.tutorial": "教程",

@@ -48,7 +48,7 @@ title: 'Java 语法'
 
 **匿名函数** *(Lambda function)* 适用于 **接口** *(Interface)* ，假如我有一个接口：
 
-```java
+```java showLineNumbers
 public interface MyInterface {
     void myFunction();
 }
@@ -56,7 +56,7 @@ public interface MyInterface {
 
 在 **方法** *(Method)* 引用此接口作为变量时，我们可以这样来简化代码：
 
-```java
+```java showLineNumbers
 public class MyClass {
     public void myMethod(MyInterface myInterface) {
         myInterface.myFunction();
@@ -77,7 +77,7 @@ myClass.myMethod(() -> {
 
 我们可以在 `/*` 和 `*/` 的基础上，在前者后方加上一个 `*` 来启用 Java Doc 。
 
-```java
+```java showLineNumbers
 /**
  * this is {@link #hello()} and it will tell you {@code hi}.
  * @author CoolCLK

@@ -10,7 +10,7 @@ title: 'Java 语法'
 
 例子：
 
-```java
+```java showLineNumbers
 {
     // 此处可以写点什么...
 }
@@ -79,7 +79,7 @@ myClass.myMethod(() -> {
 
 ```java showLineNumbers
 /**
- * this is {@link #hello()} and it will tell you {@code hi}.
+ * 这是一个 {@link #hello()} 方法，并且它会回应你 {@code hi}。
  * @author CoolCLK
  */
 public String hello() {

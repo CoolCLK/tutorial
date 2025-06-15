@@ -40,9 +40,11 @@ class Student {
     }
 }
 
-Student a = new Student("A 学生");
-Student b = a;
-b.name = "B 学生";
+public static void main(String[] args) {
+    Student a = new Student("A 学生");
+    Student b = a;
+    b.name = "B 学生";
+}
 ```
 
 按预期运行的话，此处 ```b``` 变量的 ```name``` 属性的值应该为 ```"B 学生"``` ，的确如此。
@@ -85,9 +87,11 @@ class Student implements Cloneable {
     }
 }
 
-Student a = new Student("A 学生");
-Student b = (Student) a.clone(); // 此处方法的调用是必须的
-b.name = "B 学生";
+public static void main(String[] args) {
+    Student a = new Student("A 学生");
+    Student b = (Student) a.clone(); // 此处方法的调用是必须的
+    b.name ="B 学生";
+}
 ```
 
 完成~ 你也可以另外写一个方法，就像上面那样，优点是支持跨包，缺点是针对完美主义者。

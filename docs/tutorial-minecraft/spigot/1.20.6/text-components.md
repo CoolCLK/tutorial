@@ -44,7 +44,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 }
 ```
 
-*原始 JSON：`[{"text":"Hello ","color":"red"},]`*
+*原始 JSON：`[{"keybind":"key.jump"}]`*
 
 ## SelectorComponent
 
@@ -57,6 +57,8 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
     return true;
 }
 ```
+
+*原始 JSON：`[{"selector":"@p[distance=10..]"}]`*
 
 ## ScoreComponent
 
@@ -72,6 +74,8 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 
 如果真的有个计分板叫作 `objective` ，并且 `Dinnerbone` 在上面拥有分数，那么这个指令执行时，将会奏效。
 
+*原始 JSON：`[{"score":{"name":"Dinnerbone","objective":"objective"}}]`*
+
 ## TextComponent
 
 可以显示文本。创建后是可以使用方法带上属性的，例子：
@@ -83,6 +87,8 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
     return true;
 }
 ```
+
+*原始 JSON：`[{"text":"Hello World!"}]`*
 
 ### 格式和颜色
 
@@ -134,7 +140,7 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 }
 ```
 
-*原始 JSON：`{"text":"点我","clickEvent":{"action":"open_url","value":"https://coolclk.github.io"},"hoverEvent":{"action":"show_text","value":"访问 CoolCLK 的网站!"}}`*
+*原始 JSON：`[{"text":"点我","clickEvent":{"action":"open_url","value":"https://coolclk.github.io"},"hoverEvent":{"action":"show_text","value":"访问 CoolCLK 的网站!"}}]`*
 
 ## TranslatableComponent
 

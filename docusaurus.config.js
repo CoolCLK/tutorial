@@ -101,7 +101,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['c', 'cpp', 'java', 'csharp', 'python', 'kotlin', 'pascal', 'ruby', 'php', 'rust', 'go', 'haskell', 'lua', 'ocaml', 'julia', 'scala', 'perl'],
+        additionalLanguages: ['c', 'cpp', 'java', 'csharp', 'python', 'kotlin', 'pascal', 'javascript', 'ruby', 'php', 'rust', 'go', 'haskell', 'lua', 'ocaml', 'julia', 'scala', 'perl'],
       },
     }),
 

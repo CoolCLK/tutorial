@@ -16,6 +16,13 @@ title: '开始页'
 
 > Hello, Learning!
 
+## 一些屁话
+
+为了更好的观感，本教程使用了 [docusaurus](https://docusaurus.io/) 的相关功能，
+确保你正在使用现代浏览器查看该教程。
+
+部分公式使用 $\LaTeX$ 增强可读性。
+
 ## F & Q
 
 __Q:__ 该网站如何排序目录？
@@ -24,4 +31,4 @@ __A:__ 按创建时间排序。
 
 __Q:__ 碰到内容有误/不必要，我怎么反馈？
 
-__A:__ 前往 [Discussions](https://github.com/CoolCLK/tutorial/discussions)，创建一个新讨论
+__A:__ 前往 [Discussions](https://github.com/CoolCLK/tutorial/discussions)，创建一个新讨论。

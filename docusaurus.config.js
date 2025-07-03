@@ -1,53 +1,56 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Tutorial',
   tagline: '各类教程、免费教程',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: 'https://coolclk.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/tutorial/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'CoolCLK', // Usually your GitHub org/user name.
-  projectName: 'tutorial', // Usually your repo name.
+  organizationName: 'CoolCLK',
+  projectName: 'tutorial',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans'],
   },
 
+  markdown: {
+    mermaid: true,
+  },
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
+
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          remarkPlugins: [
+            remarkMath,
+          ],
+          rehypePlugins: [
+            rehypeKatex,
+          ],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -57,7 +60,6 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
@@ -99,9 +101,13 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['java', 'csharp', 'php', 'powershell'],
+        additionalLanguages: ['c', 'cpp', 'java', 'csharp', 'python', 'kotlin', 'pascal', 'javascript', 'ruby', 'php', 'rust', 'go', 'haskell', 'lua', 'ocaml', 'julia', 'scala', 'perl'],
       },
     }),
+
+  themes: [
+    '@docusaurus/theme-mermaid',
+  ],
 };
 
 export default config;

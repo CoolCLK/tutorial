@@ -4,6 +4,12 @@ sidebar_label: '创建一个新的维度'
 title: '创建一个新的维度'
 ---
 
+:::warning
+
+本教程涉及到的 Minecraft 版本已经有些老旧，不再适用于主流的版本。
+
+:::
+
 在本期教程中，我们将创建一个新的**维度** *(Dimension)*。
 
 我们在包 ```coolclk.tutorial.world``` ，创建几个类并像这样输入代码：

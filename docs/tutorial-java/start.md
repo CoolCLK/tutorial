@@ -4,11 +4,23 @@ sidebar_label: '入门'
 title: 'Java 开始页'
 ---
 
-> 此教程使用 **Java Development Kit 1.8.0_341** ，与高版本 Java 可能有*些许差异*
+:::warning
 
-> **Java** 也许并不是适合你开发的最终语言，也有与 **Java** 同样是使用 *Java Virtual Machine* 的 **Kotlin** *(虽然不再是了)*。
+此教程使用 **Java Development Kit 1.8.0_341** ，与高版本 Java 可能有*些许差异*
 
-> 此教程此后或将不再展示全部代码内容或将类路径写全、省略 import 语句
+:::
+
+:::tip
+
+**Java** 也许并不是适合你开发的最终语言，也有与 **Java** 同样是使用 *Java Virtual Machine* 的 **Kotlin** *(虽然不再是了)*。
+
+:::
+
+:::note
+
+此教程此后或将不再展示全部代码内容或将类路径写全、省略 import 语句
+
+:::
 
 **Java** 是一个*中级语言*，拥有 *C* 和 *C++* 类似的继承特性，且相较于前两者更加易于编程。
 

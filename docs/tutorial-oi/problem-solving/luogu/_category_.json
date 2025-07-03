@@ -1,6 +1,6 @@
 {
-  "label": "OI 教程",
-  "position": 6,
+  "label": "洛谷",
+  "position": 1,
   "link": {
     "type": "generated-index"
   }

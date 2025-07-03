@@ -167,7 +167,6 @@ int main() {
   <TabItem value="java" label="Java" default>
 
 ```java showLineNumbers
-
 public class Main {
     static void merge(int[] arr,int[] left, int[] right) {
         int i = 0, j = 0,k = 0;

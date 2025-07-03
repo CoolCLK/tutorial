@@ -54,20 +54,4 @@ public class Main {
 ```
 
   </TabItem>
-  <TabItem value="javascript" label="JavaScript">
-
-```javascript
-public class Main {
-    static int[] arr = {1, 2, 3, 4};
-    static int i = 0; // 这是一个指针
-
-    public static void main(String[] args) {
-        System.out.println(arr[i]); // 输出指针指向的元素
-        i += 2; // 指针向右移动两步
-        System.out.println(arr[i]); // 输出指针指向的元素，应当为 3
-    }
-}
-```
-
-  </TabItem>
 </Tabs>

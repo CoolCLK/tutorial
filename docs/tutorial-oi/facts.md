@@ -6,6 +6,13 @@ title: 'OI 冷知识'
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+:::note
+
+说是冷知识...
+不过讲的挺杂的，这里也算得上杂项。
+
+:::
+
 ## 缩写
 
 初看这些缩写可能难以快速反应过来，但是写多了程序便会习惯：
@@ -50,16 +57,20 @@ import TabItem from '@theme/TabItem';
 | MLE | Memory Limit Exceeded | 选手程序占用的最大空间超过了给定的空间限制。                                                        |
 | OLE | Output Limit Exceeded | 选手程序输出的内容的量超过了最大限制。                                                           |
 
-### 竞赛技巧
+### 小技巧
 
 <Tabs>
   <TabItem value="cpp" label="C++" default>
+
+#### 竞赛佬必备
 
 时间紧，任务重，直接通用头文件吧！
 
 ```cpp
 #include <bits/stdc++.h>
 ```
+
+#### 更好的重复循环
 
 为什么重复做某件事情还要 `for` 写长长一坨？直接 `#define` 一下就舒服了：
 
@@ -81,6 +92,8 @@ int main() {
     return 0;
 }
 ```
+
+### 更好的输入
 
 你还在傻傻的一个个 `cin` 来赋值吗，太不美观了！
 不妨试试不定参数方法：

@@ -82,5 +82,48 @@ int main() {
 }
 ```
 
+你还在傻傻的一个个 `cin` 来赋值吗，太不美观了！
+不妨试试不定参数方法：
+
+```cpp
+void acceptInput() {}
+
+/**
+ * 接受多个参数的输入。
+ * @author CoolCLK
+ */
+template <typename T, typename... Args>
+void acceptInput(T& first, Args&... args) {
+    std::cin >> first;
+    acceptInput(args...);
+}
+```
+
+之后，我们只需要优雅的使用它即可：
+
+```cpp {18} showLineNumbers
+#include <iostream>
+using namespace std;
+
+void acceptInput() {}
+
+/**
+ * 接受多个参数的输入。
+ * @author CoolCLK
+ */
+template <typename T, typename... Args>
+void acceptInput(T& first, Args&... args) {
+    std::cin >> first;
+    acceptInput(args...);
+}
+
+int main() {
+    int a, b, c, d, e, f, g;
+    acceptInput(a, b, c, d, e, f, g);
+    cout << a + b + c + d + e + f + g << endl;
+    return 0;
+}
+```
+
   </TabItem>
 </Tabs>

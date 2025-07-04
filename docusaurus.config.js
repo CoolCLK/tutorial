@@ -49,7 +49,7 @@ const config = {
             remarkMath,
           ],
           rehypePlugins: [
-            rehypeKatex,
+            [rehypeKatex, { output: 'mathml' }],
           ],
         },
         theme: {
@@ -77,7 +77,7 @@ const config = {
             label: '教程',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/CoolCLK/tutorial',
             label: 'GitHub',
             position: 'right',
           },

@@ -93,49 +93,19 @@ int main() {
 }
 ```
 
-#### 更好的输入
+#### 更好的数据类型
 
-你还在傻傻的一个个 `cin` 来赋值吗，太不美观了！
-不妨试试不定参数方法：
+你绝对能够用得上的 `typedef` ！
 
 ```cpp
-void acceptInput() {}
-
-/**
- * 接受多个参数的输入。
- * @author CoolCLK
- */
-template <typename T, typename... Args>
-void acceptInput(T& first, Args&... args) {
-    std::cin >> first;
-    acceptInput(args...);
-}
-```
-
-之后，我们只需要优雅的使用它即可：
-
-```cpp {18} showLineNumbers
-#include <iostream>
-using namespace std;
-
-void acceptInput() {}
-
-/**
- * 接受多个参数的输入。
- * @author CoolCLK
- */
-template <typename T, typename... Args>
-void acceptInput(T& first, Args&... args) {
-    std::cin >> first;
-    acceptInput(args...);
-}
-
-int main() {
-    int a, b, c, d, e, f, g;
-    acceptInput(a, b, c, d, e, f, g);
-    cout << a + b + c + d + e + f + g << endl;
-    return 0;
-}
+typedef long long l_long;
+typedef long double l_double;
+typedef signed char s_char;
+typedef unsigned char u_char;
+typedef unsigned short u_short;
+typedef unsigned int u_int;
+typedef unsigned long u_long;
+typedef unsigned long long ul_long;
 ```
 
   </TabItem>

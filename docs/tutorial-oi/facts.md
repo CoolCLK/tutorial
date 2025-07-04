@@ -75,14 +75,14 @@ import TabItem from '@theme/TabItem';
 为什么重复做某件事情还要 `for` 写长长一坨？直接 `#define` 一下就舒服了：
 
 ```cpp
-#define repeat(n) for (int _= 0; _ < n; _++)
+#define repeat(n) for (size_t _ = 0; _ < n; _++)
 ```
 
 具体用法：
 
 ```cpp {6} showLineNumbers
 #include <iostream>
-#define repeat(n) for (int _= 0; _ < n; _++)
+#define repeat(n) for (size_t _ = 0; _ < n; _++)
 using namespace std;
 
 int main() {

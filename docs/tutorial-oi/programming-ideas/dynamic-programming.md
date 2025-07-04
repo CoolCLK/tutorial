@@ -35,7 +35,7 @@ $$f(n) = f(n - 1) + f(n - 2)$$
  */
 #include <iostream>
 #include <unordered_map>
-#define l_long long long
+typedef long long l_long;
 
 l_long fibonacci(int x) {
     if (x <= 1) {
@@ -69,7 +69,7 @@ int main() {
  */
 #include <iostream>
 #include <unordered_map>
-#define l_long long long
+typedef long long l_long;
 
 std::unordered_map<int, l_long> sequence = {{0, 0}, {1, 1}}; // 记录已经计算过的数字
 

@@ -19,4 +19,8 @@
   --ifm-color-primary-lighter: #d2d2d2;
   --ifm-color-primary-lightest: #e2e2e2;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  .dark-invert {
+    filter: invert(1);
+  }
 }

@@ -18,7 +18,6 @@ const config = {
   projectName: 'tutorial',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'zh-Hans',
@@ -27,6 +26,9 @@ const config = {
 
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
 
   stylesheets: [
@@ -57,7 +59,7 @@ const config = {
 
   themeConfig:
     ({
-      image: '',
+      image: 'img/logo.svg',
       navbar: {
         title: '',
         logo: {

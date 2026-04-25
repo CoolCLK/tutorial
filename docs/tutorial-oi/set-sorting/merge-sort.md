@@ -8,7 +8,7 @@ import TabItem from '@theme/TabItem';
 
 ## 介绍
 
-__归并排序__ _(Merge Sort)_，其中体现了 [分而治之]() 的编程思想，
+__归并排序__ _(Merge Sort)_，其中体现了分而治之的编程思想，
 其时间复杂度为 $O(n\log_{}{n})$，
 空间复杂度为 $O(n)$。
 

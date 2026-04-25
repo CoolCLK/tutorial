@@ -31,8 +31,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`CoolCLK 的教程网站`}
-      description="CoolCLK 的教程网站">
+      title={`教程网站`}
+      description="clk">
       <main style={{display: "flex", width: "100%", flexDirection: "column", justifyContent: "center", flex: 1}}>
         <HomepageBody />
       </main>

@@ -14,7 +14,7 @@ const config = {
   url: 'https://coolclk.github.io',
   baseUrl: '/tutorial/',
 
-  organizationName: 'CoolCLK',
+  organizationName: 'clk',
   projectName: 'tutorial',
 
   onBrokenLinks: 'throw',
@@ -31,11 +31,7 @@ const config = {
 
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
-      type: 'text/css',
-      integrity:
-        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-      crossorigin: 'anonymous',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.38/dist/katex.min.css',
     },
   ],
 
@@ -61,10 +57,9 @@ const config = {
 
   themeConfig:
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: '',
       navbar: {
-        title: 'CoolCLK 的网站',
+        title: '',
         logo: {
           alt: '图标',
           src: 'img/logo.svg',
@@ -91,12 +86,12 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/CoolCLK/tutorials',
+                href: 'https://github.com/CoolCLK/tutorial',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} CoolCLK, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} clk, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

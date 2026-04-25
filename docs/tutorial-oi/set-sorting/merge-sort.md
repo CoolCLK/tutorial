@@ -70,7 +70,7 @@ stateDiagram-v2
 ```cpp showLineNumbers
 /**
  * 合并排序实例程序。
- * @author CoolCLK
+ * @author clk
  */
 
 #include <iostream>
@@ -79,7 +79,7 @@ stateDiagram-v2
 
 /**
  * 合并两个有序数组。
- * @author CoolCLK
+ * @author clk
  */
 template<typename T>
 std::vector<T> merge(std::vector<T> arr, std::vector<T> a, std::vector<T> b) {
@@ -111,7 +111,7 @@ std::vector<T> merge(std::vector<T> arr, std::vector<T> a, std::vector<T> b) {
 
 /**
  * 对数组进行合并排序。
- * @author CoolCLK
+ * @author clk
  */
 template<typename T>
 void merge_sort(std::vector<T> arr) {
@@ -132,7 +132,7 @@ void merge_sort(std::vector<T> arr) {
 
 /**
  * 主函数，可用于通用数组输入、输出 CLI 模板。
- * @author CoolCLK
+ * @author clk
  */
 int main() {
     std::vector<int> array(0);

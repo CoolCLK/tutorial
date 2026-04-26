@@ -33,7 +33,7 @@ const config = {
 
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.38/dist/katex.min.css',
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css',
     },
   ],
 
@@ -47,7 +47,18 @@ const config = {
             remarkMath,
           ],
           rehypePlugins: [
-            [rehypeKatex, { output: 'mathml' }],
+            [
+              rehypeKatex,
+              {
+                output: 'mathml',
+                strict: (errorCode, errorMsg, token) => {
+                  if (errorCode === 'unicodeTextInMathMode') {
+                    return 'ignore';
+                  }
+                  return 'warn';
+                },
+              },
+            ],
           ],
         },
         theme: {

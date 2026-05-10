@@ -134,13 +134,13 @@ public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command
 public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command command, @Nonnull String label, @Nonnull String[] arguments) {
     TextComponent message = new TextComponent("点我");
     message.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://coolclk.github.io"));
-    message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text("访问 CoolCLK 的网站!")));
+    message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text("访问 clk 的网站!")));
     sender.sendMessage(message);
     return true;
 }
 ```
 
-*原始 JSON：`[{"text":"点我","clickEvent":{"action":"open_url","value":"https://coolclk.github.io"},"hoverEvent":{"action":"show_text","value":"访问 CoolCLK 的网站!"}}]`*
+*原始 JSON：`[{"text":"点我","clickEvent":{"action":"open_url","value":"https://coolclk.github.io"},"hoverEvent":{"action":"show_text","value":"访问 clk 的网站!"}}]`*
 
 ## TranslatableComponent
 

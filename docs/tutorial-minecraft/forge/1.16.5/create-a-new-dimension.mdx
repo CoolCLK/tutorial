@@ -148,8 +148,8 @@ title: '创建一个新的维度'
 
 我们在任意软件包下创建一个类（例如 ```ChunkGeneratorExample``` ），我们首先继承 ```net.minecraft.world.gen.ChunkGenerator``` ，代码如下：
 
-```java title="/src/main/java/coolclk/tutorial/world/gen/ChunkGeneratorExample.java" showLineNumbers
-package coolclk.tutorial.world.gen;
+```java title="/src/main/java/clk/tutorial/world/gen/ChunkGeneratorExample.java" showLineNumbers
+package clk.tutorial.world.gen;
 
 import net.minecraft.world.gen.ChunkGenerator;
 
@@ -193,7 +193,7 @@ public class ChunkGeneratorExample extends ChunkGenerator {
 
 当我们编写完成后，怎么使用呢？很简单，我们在代码结尾添加这些代码：
 
-```java title="/src/main/java/coolclk/tutorial/world/gen/ChunkGeneratorExample.java"
+```java title="/src/main/java/clk/tutorial/world/gen/ChunkGeneratorExample.java"
 static {
     Registry.register(Registry.CHUNK_GENERATOR, "example_generator", ChunkGeneratorExample.CODEC);
 }
@@ -212,7 +212,7 @@ static {
 
 最后，我们来注册这个维度。这里我创建了一个新的类来管理维度，代码如下：
 
-```java title="/src/main/java/coolclk/tutorial/common/DimensionManager.java"
+```java title="/src/main/java/clk/tutorial/common/DimensionManager.java"
 public static final RegistryKey<Dimension> EXAMPLE_DIMENSION = RegistryKey.create(Registry.LEVEL_STEM_REGISTRY, new ResourceLocation("example_dimension"));
 ```
 

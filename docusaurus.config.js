@@ -116,20 +116,6 @@ const config = {
   themes: [
     '@docusaurus/theme-mermaid',
   ],
-
-  webpack: {
-    configure: (webpackConfig) => {
-      return {
-        ...webpackConfig,
-        ignoreWarnings: [
-          (warning) =>
-            warning.message &&
-            warning.message.includes('Critical dependency') &&
-            warning.message.includes('vscode-languageserver-types'),
-        ],
-      };
-    },
-  },
 };
 
 export default config;
